@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ShubahSubah",
+    "email": "Shubhanshu@gmail.com",
+    "phone": "8208372029",
+    "travelDate": "2024-12-26",
+    "travelCount": "4",
+    "message": ""
+  },
+  {
+    "name": "Anirudh",
+    "email": "Anirugh@gmail.com",
+    "phone": "8208372029",
+    "travelDate": "2024-12-27",
+    "travelCount": "2",
+    "message": "Jaldi kar booking!"
+  },
+  {
+    "name": "Jyotsna",
+    "email": "Jyotsna@gmail.com",
+    "phone": "8208372029",
+    "travelDate": "2025-01-02",
+    "travelCount": "1",
+    "message": "Please book!"
+  }
+]

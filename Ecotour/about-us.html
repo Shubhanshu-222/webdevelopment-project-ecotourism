@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecotour</title>
+    <link rel="stylesheet" href="../frontend/css/theme.css">
+    <link rel="stylesheet" href="../frontend/css/header.css">
+    <link rel="stylesheet" href="../frontend/css/footer.css">
+    <link rel="stylesheet" href="../frontend/css/about-us.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div id="nav-left">
+                <a href="../Ecotour/index.html" target="_self" class="logo">
+                    <img src="../Assets/Ecotour_logo/Ecotourlogobk.png" alt="Ecotour Logo">
+                </a>
+            </div>
+
+            <div id="nav-middle">
+                <a href="../Ecotour/about-us.html">About Us</a>
+                <a href="../Ecotour/destinations.html">Destinations</a>
+                <a href="../Ecotour/blogs.html">Blogs</a>
+                <a href="../Ecotour/contact-us.html">Contact Us</a>
+            </div>
+
+            <div class="button-group dropdown-wrapper account-menu">
+                <a href="../Ecotour/supportpage.html"><button  class="btn btn-support"> Support</button></a>
+                <button class="btn btn-login">My Account</button>
+                <div class="dropdown-content" id="account-dropdown">
+                    <a href="#" id="sign-in-link">Sign in</a>
+                    <a href="#" id="sign-up-link">Sign up</a>
+                    <a href="#" id="logout-link"  style="display: none;">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="login-popup" id="login-popup">
+            <i class="fas fa-times close-btn" id="close-login-btn"></i>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email</label>
+                <input id="login-email" name="email" required type="email" />
+                <label for="password">Password</label>
+                <input id="login-password" name="password" required type="password" />
+                <a href="#">Forgot Password?</a>
+                <button class="login-btn" type="submit">LOGIN</button>
+            </form>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <p>Not a member? <a href="#" id="signup-link-from-login">Sign up</a></p>
+        </div>
+
+        <div class="signup-popup" id="signup-popup">
+            <div class="signup-popup-content">
+                <span class="close-btn" id="close-signup-btn"><i class="fas fa-times"></i></span>
+                <h2>Signup Now</h2>
+                <form id="signup-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" />
+                    <label for="email">Email</label>
+                    <input id="signup-email" name="email" type="email" />
+                    <label for="password">Password</label>
+                    <input id="signup-password" name="password" type="password" />
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" name="confirm-password" type="password" />
+                    <label for="mobile-number">Mobile Number</label>
+                    <input id="mobile-number" name="mobile-number" type="tel" />
+                    <button type="submit">SIGN UP</button>
+                </form>
+                <div class="login-link">Already have an Account? <a href="#" id="login-link-from-signup">Login Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="about-page">
+        <section class="about-content">
+            <div class="about-grid">
+                <!-- Left Column: Mission and Vision -->
+                <div class="about-left">
+                    <div class="about-section">
+                        <h2>Our Mission</h2>
+                        <p>
+                            Our mission is to promote eco-friendly travel and help preserve the beauty of the planet while
+                            providing travelers with unforgettable experiences.
+                        </p>
+                    </div>
+                    <div class="about-section">
+                        <h2>Our Story</h2>
+                        <p>
+                            We started EcoTour to create an impactful change in the travel industry, encouraging people to
+                            explore the world in a way that respects nature and minimizes carbon footprints.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Divider Line -->
+                <div class="divider"></div>
+    
+                <!-- Right Column: Team Section -->
+                <div class="about-right team-section">
+                    <h2>Meet the Team</h2>
+                    <div class="team-member">
+                        <img src="../Assets/about-us/mypic2.jpg" alt="Shubhanshu Bansod">
+                        <div>
+                            <h3>Shubhanshu Bansod</h3>
+                            <p>Founder and CEO</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="../Assets/about-us/4.png" alt="Priya Deshmukh">
+                        <div>
+                            <h3>Team Member 2</h3>
+                            <p>Lead Travel Consultant</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="../Assets/about-us/1.png" alt="Aarav Iyer">
+                        <div>
+                            <h3>Team Member 3</h3>
+                            <p>Marketing and Communications Head</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="../Assets/about-us/3.png" alt="Sneha Mehta">
+                        <div>
+                            <h3>Team Member 4</h3>
+                            <p>Operations Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="homepage.html">
+                        <img src="../Assets/Ecotour_logo/Ecotourlogobk.png" alt="Ecotour Logo">
+                    </a>
+                </div>
+    
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="../Ecotour/about-us.html">About Us</a>
+                    <a href="../Ecotour/destinations.html">Destinations</a>
+                    <a href="../Ecotour/blogs.html">Blogs</a>
+                    <a href="../Ecotour/contact-us.html">Contact Us</a>
+                    </div>
+    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                    </div>
+    
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <a href="https://facebook.com" target="_blank" class="social-icon"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ecotour. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../frontend/scripts/index.js"></script>
+        <script src="../frontend/scripts/common.js"></script>
+        <script src="../frontend/scripts/component.js"></script>
+    
+
+    </body>
+    
+   
+
+    </html>

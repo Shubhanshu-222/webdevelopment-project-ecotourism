@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecotour</title>
+    <link rel="stylesheet" href="../frontend/css/header.css">
+    <link rel="stylesheet" href="../frontend/css/footer.css">
+    <link rel="stylesheet" href="../frontend/css/theme.css">
+    <link rel="stylesheet" href="../frontend/css/destination-info.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div id="nav-left">
+                <a href="../Ecotour/index.html" target="_self" class="logo">
+                    <img src="../Assets/Ecotour_logo/Ecotourlogobk.png" alt="Ecotour Logo">
+                </a>
+            </div>
+
+            <div id="nav-middle">
+                <a href="../Ecotour/about-us.html">About Us</a>
+                <a href="../Ecotour/destinations.html">Destinations</a>
+                <a href="../Ecotour/blogs.html">Blogs</a>
+                <a href="../Ecotour/contact-us.html">Contact Us</a>
+            </div>
+
+            <div class="button-group dropdown-wrapper account-menu">
+                <a href="../Ecotour/supportpage.html"><button  class="btn btn-support"> Support</button></a>
+                <button class="btn btn-login">My Account</button>
+                <div class="dropdown-content" id="account-dropdown">
+                    <a href="#" id="sign-in-link">Sign in</a>
+                    <a href="#" id="sign-up-link">Sign up</a>
+                    <a href="#" id="logout-link"  style="display: none;">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="login-popup" id="login-popup">
+            <i class="fas fa-times close-btn" id="close-login-btn"></i>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email</label>
+                <input id="login-email" name="email" required type="email" />
+                <label for="password">Password</label>
+                <input id="login-password" name="password" required type="password" />
+                <a href="#">Forgot Password?</a>
+                <button class="login-btn" type="submit">LOGIN</button>
+            </form>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <p>Not a member? <a href="#" id="signup-link-from-login">Sign up</a></p>
+        </div>
+
+        <div class="signup-popup" id="signup-popup">
+            <div class="signup-popup-content">
+                <span class="close-btn" id="close-signup-btn"><i class="fas fa-times"></i></span>
+                <h2>Signup Now</h2>
+                <form id="signup-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" />
+                    <label for="email">Email</label>
+                    <input id="signup-email" name="email" type="email" />
+                    <label for="password">Password</label>
+                    <input id="signup-password" name="password" type="password" />
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" name="confirm-password" type="password" />
+                    <label for="mobile-number">Mobile Number</label>
+                    <input id="mobile-number" name="mobile-number" type="tel" />
+                    <button type="submit">SIGN UP</button>
+                </form>
+                <div class="login-link">Already have an Account? <a href="#" id="login-link-from-signup">Login Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Collage Gallery -->
+    <section class="destination-page">
+    <section class="collage-gallery">
+        <div class="gallery-item item-1"><img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/1.jpg" alt="Scenic View 1"></div>
+        <div class="gallery-item item-2"><img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/2.png" alt="Scenic View 2"></div>
+        <div class="gallery-item item-3"><img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/3.jpg" alt="Scenic View 3"></div>
+        <div class="gallery-item item-4"><img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/4.jpg" alt="Scenic View 4"></div>
+        <div class="gallery-item item-5"><img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/5.jpg" alt="Scenic View 5"></div>
+    </section>
+
+    <main class="content">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Title Section -->
+            <section class="title">
+                <h1> Sanjay Gandhi National Park</h1>
+                <p class="quick-overview">Maharashtra, India | National Park | Best Time: October to March | Monsoon
+                    (June to September)</p>
+            </section>
+
+            <!-- Description Section -->
+            <section class="description">
+                <h2 class="destination-h2">About the Park</h2>
+                <p>The Sanjay Gandhi National Park (SGNP), located in Mumbai, India, is a vast green space offering a
+                    wide variety of flora and fauna. With trekking trails, serene lakes, and a rich cultural heritage,
+                    it’s a perfect escape from the hustle of city life. It’s one of the most visited parks in Asia,
+                    known for its biodiversity and peaceful environment.</p>
+            </section>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="1">Itinerary</button>
+                <button class="tab-btn" data-tab="2">Attractions</button>
+                <button class="tab-btn" data-tab="3">Reviews</button>
+                <button class="tab-btn" data-tab="4">FAQ</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <section>
+                <div class="tab-content active" id="tab-1">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="day-tag">Day 1</span>
+                                <span class="day-title">Exploring History and Wildlife: A Journey Through Kanheri Caves and Nature Trails</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Morning:
+
+                                        Begin your adventure at the Kanheri Caves, a complex of ancient Buddhist rock-cut caves that offer insights into history and spirituality. Admire the intricate carvings, large prayer halls, and ancient inscriptions that date back to the 1st century BCE.
+                                        Spend 2-3 hours exploring these caves and soaking in the serene atmosphere amidst the dense greenery.</li><br>
+                                    <li>Afternoon:
+
+                                        Take a break for lunch at one of the park's designated picnic spots or nearby cafes.
+                                        Post-lunch, embark on a nature trail, where you can enjoy a leisurely walk through the forest. Look out for exotic birds and spot small mammals like monkeys and deer. The park’s calm ambiance and fresh air make for a rejuvenating experience.</li><br>
+                                    <li>Evening:
+
+                                        Relax by Gandhi Tekdi, a peaceful viewpoint within the park offering panoramic views of the lush greenery.
+                                        End your day by the lake area, where you can sit back, enjoy the tranquil surroundings, and watch the sunset.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="day-tag">Day 2</span>
+                                <span class="day-title">Thrilling Safaris and Scenic Escapes: A Day with the Big Cats and Waterfalls</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li> Morning:
+
+                                        Start your day with the Lion and Tiger Safari, a guided tour in a secure vehicle that brings you up close to these majestic animals. This experience is thrilling and safe, perfect for visitors of all ages.
+                                        After the safari, visit the Mini Zoo, which houses various species of reptiles, birds, and small mammals.</li><br>
+                                    <li>Midday:
+
+                                        Take a break for lunch at the park’s restaurant or carry packed food. Enjoy your meal amidst the serene surroundings.</li><br>
+                                    <li>Afternoon:
+
+                                        Head to the Dianthubhakti Waterfall (seasonal), a picturesque spot ideal for photography and relaxation. The waterfall is especially stunning during or right after the monsoon season.
+                                        Engage in a short trek near the waterfall area for a closer connection with nature.</li><br>
+                                    <li>Evening:
+
+                                        Conclude your visit with a peaceful stroll along one of the park’s lesser-explored trails or simply unwind in the open picnic areas.
+                                        Depart the park, carrying with you the memories of a perfect blend of adventure, history, and nature.</li>    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-2">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <div class="accordion-text">
+                                    <span>Kanheri Caves</span>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-detail">
+                                    <div class="accordion-img">
+                                        <img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/kanheri caves.jpeg" alt="Attraction 1">
+                                    </div>
+                                    <div class="accordion-description">
+                                        <p>Ancient Buddhist caves dating back to 1st century BCE.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <div class="accordion-text">
+                                    <span>Wildlife</span>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-detail">
+                                    <div class="accordion-img">
+                                        <img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/wildlife.jpeg" alt="Attraction 2">
+                                    </div>
+                                    <div class="accordion-description">
+                                        <p>Leopards, monkeys, deer, and a variety of bird species.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <div class="accordion-text">
+                                    <span>Dianthubhakti and Waterfall</span>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-detail">
+                                    <div class="accordion-img">
+                                        <img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/waterfall.jpg" alt="Attraction 2">
+                                    </div>
+                                    <div class="accordion-description">
+                                        <p>A picturesque spot perfect for treks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <div class="accordion-text">
+                                    <span>Lion and Tiger Safari</span>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-detail">
+                                    <div class="accordion-img">
+                                        <img src="../Assets/Destinations/nature/sanjay-gandhi-national-park/Tiger-safari-in-sanjay-gandhi-national-park.jpg" alt="Attraction 2">
+                                    </div>
+                                    <div class="accordion-description">
+                                        <p>A popular attraction where visitors can see wildlife up close.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-content" id="tab-3">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="review-title">Excellent Service</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>"The trip was fantastic! The guides were amazing and the activities were so much
+                                    fun!"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="review-title">Great Experience</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>"Had a great time. Highly recommend the itinerary and the attractions we visited!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-4">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="faq-number">1.</span>
+                                <span class="faq-question">What is the entry fee for Sanjay Gandhi National Park?</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>The entry fee varies for Indian and foreign tourists. For Indians, the fee is typically around INR 50, while foreign tourists may have to pay a higher fee.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="faq-number">2.</span>
+                                <span class="faq-question">How do I reach Sanjay Gandhi National Park?</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>SGNP is located about 15 km from Mumbai's city center. You can reach it via a taxi, local bus, or private vehicle.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="faq-number">3.</span>
+                                <span class="faq-question">Are there any facilities for children?</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Yes, the park has a mini zoo, a nature trail, and a children’s play area, making it a family-friendly destination.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">
+                                <span class="faq-number">4.</span>
+                                <span class="faq-question">Can I take my own vehicle inside the park?</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Private vehicles are not allowed inside the park; however, you can avail of the safari services provided by the park.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section class="map-section">
+                <h2 class="destination-h2">Map</h2>
+                <div class="map">[Interactive map goes here]</div>
+            </section>
+        </div>
+
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Booking Section -->
+            <section class="booking">
+                <h2 class="destination-h2">Book Your Adventure</h2>
+                <form id="booking-form" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="booking-name" name="name" 
+                               required 
+                               minlength="3" 
+                               maxlength="50" 
+                               pattern="[A-Za-z\s]+" 
+                               title="Name should only contain letters and spaces, with a minimum of 3 characters.">
+                        <div class="error" id="booking-name-error"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" 
+                               required 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" 
+                               title="Please enter a valid email address.">
+                        <div class="error" id="email-error"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" 
+                               required 
+                               pattern="[0-9]{10}" 
+                               title="Phone number must be exactly 10 digits without spaces or special characters.">
+                        <div class="error" id="phone-error"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="travel-date">Travel Date</label>
+                        <input type="date" id="travel-date" name="travel-date" 
+                               required 
+                               min="2024-12-25" 
+                               title="The travel date must be today or a future date.">
+                        <div class="error" id="travel-date-error"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="travel-count">No. of Travellers</label>
+                        <input type="number" id="travel-count" name="travel-count" 
+                               required 
+                               min="1" 
+                               max="10" 
+                               title="Please enter a number between 1 and 10.">
+                        <div class="error" id="travel-count-error"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  maxlength="250" 
+                                  title="Message can be up to 250 characters."></textarea>
+                        <div class="error" id="message-error"></div>
+                    </div>
+        
+                    <button type="submit" class="btn" id="submit-btn" disabled>Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="homepage.html">
+                    <img src="../Assets/Ecotour_logo/Ecotourlogobk.png" alt="Ecotour Logo">
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="../Ecotour/about-us.html">About Us</a>
+                <a href="../Ecotour/destinations.html">Destinations</a>
+                <a href="../Ecotour/blogs.html">Blogs</a>
+                <a href="../Ecotour/contact-us.html">Contact Us</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ecotour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../frontend/scripts/common.js"></script>
+    <script src="../frontend/scripts/destination-info.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+</body>
+
+</html>

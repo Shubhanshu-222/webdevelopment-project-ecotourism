@@ -1,0 +1,591 @@
+/* Scoped Styles */
+body{
+    line-height: 1.6;
+    color: #333;
+    background: #f7f9fc;
+}
+.destination-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 6%;
+    padding: 0;
+    
+}
+
+.collage-gallery {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 equal-width columns for larger screens */
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.collage-gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Assign varying column spans for a dynamic look */
+.collage-gallery .item-1 {
+    grid-column: span 2;
+}
+
+.collage-gallery .item-2 {
+    grid-column: span 3;
+}
+
+.collage-gallery .item-3 {
+    grid-column: span 2;
+}
+
+.collage-gallery .item-4 {
+    grid-column: span 1;
+}
+
+.collage-gallery .item-5 {
+    grid-column: span 2;
+}
+
+.collage-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage-gallery .gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .collage-gallery {
+        display: flex; /* Use flexbox for horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px; /* Maintain spacing between items */
+        padding: 15px;
+        max-width: 95%; /* Adjust gallery width to maintain desktop-like proportions */
+        margin: 0px 5%; /* Center the gallery */
+        
+    }
+
+    .collage-gallery .gallery-item {
+        flex: 0 0 auto; /* Prevent items from shrinking or stretching */
+        width: 25%; /* Set a consistent width for items */
+    }
+}
+
+/* Scrollable styles for mobile view */
+@media (max-width: 480px) {
+    .collage-gallery {
+        display: flex; /* Use flexbox for horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px; /* Maintain spacing between items */
+        padding: 10px;
+        max-width: 90%; /* Maintain desktop-like proportions */
+        margin: 0 5%; /* Center the gallery */
+        margin-top: 20%;
+    }
+
+    .collage-gallery .gallery-item {
+        flex: 0 0 auto; /* Prevent items from shrinking or stretching */
+        width: 45%; /* Set a consistent width for items */
+    }
+}
+
+/* Hide scrollbar for horizontal scrolling */
+.collage-gallery {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.collage-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* Layout */
+.destination-page .content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destination-page .left-column {
+    flex: 3;
+}
+
+/* Section Styles */
+.destination-page section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.destination-page h1, .destination-h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #34495e;
+    border-left: 4px solid #4CAF50;
+    padding-left: 10px;
+}
+
+.destination-page p, .destination-page ul, .destination-page li {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Tabs Styles */
+.destination-page .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+    gap: 8px;
+}
+
+.destination-page .tab-btn {
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.destination-page .tab-btn:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.destination-page .tab-btn.active {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.destination-page .tab-content {
+    display: none;
+    background: white;
+    border-radius: 5px;
+   
+}
+
+.destination-page .tab-content.active {
+    display: block;
+}
+
+/* Accordion Styles */
+.destination-page .accordion-item {
+    margin-bottom: 10px;
+}
+
+.destination-page .accordion-button {
+    background-color: #f7f9fc;
+    color: #34495e;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.destination-page .accordion-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.destination-page .accordion-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.destination-page .accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 5px;
+}
+
+.destination-page .accordion-content.active {
+    display: block;
+}
+
+/* Itinerary Accordion Day Tags */
+.destination-page .day-tag {
+    background-color: #FFC107;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.day-tag {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #333;
+    align-self: center;
+}
+
+.day-title {
+    flex: 1 1 auto;
+    color: #555;
+    text-align: left;
+    line-height: 1.5;
+    align-self: center;
+}
+
+.accordion-button {
+    align-items: center;
+    justify-content: center;
+}
+
+.day-title {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Attractions Accordion */
+.destination-page .accordion-button {
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.destination-page .accordion-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.destination-page .accordion-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.destination-page .accordion-content {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 5px;
+}
+
+.destination-page .accordion-content.active {
+    display: block;
+}
+
+.destination-page .accordion-detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.destination-page .accordion-img {
+    flex: 1;
+    max-width: 120px;
+}
+
+.destination-page .accordion-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.destination-page .accordion-description {
+    flex: 2;
+}
+
+.destination-page .accordion-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.destination-page .accordion-description p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.destination-page .accordion-button .accordion-text h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Itinerary Accordion: Day Labels */
+.destination-page .accordion-button.day {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.destination-page .accordion-button.day .day-tag {
+    background-color: #4CAF50;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+
+.destination-page .accordion-button.day:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.destination-page .accordion-button.day.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* FAQ Numbering */
+.destination-page .faq-number {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+
+/* Booking Form */
+.destination-page .booking form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px; /* Set a fixed width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.destination-page .booking label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.destination-page .booking input,
+.destination-page .booking textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Focused field styling */
+.destination-page .booking input:focus-visible, 
+.destination-page .booking textarea:focus-visible {
+    border: 1px solid #4CAF50; /* Green border for active field */
+    box-shadow: 0px 3px 6px rgba(72, 175, 80, 0.3); /* Subtle green shadow */
+}
+
+.destination-page .booking input:focus, 
+.destination-page .booking textarea:focus {
+    outline: none; /* Removes the default outline */
+}
+
+.destination-page .form-group{
+    margin-bottom: 15px;
+}
+
+
+/* Submit button styling */
+.destination-page .booking .btn {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.destination-page .booking .btn:hover {
+    background: #45a049;
+}
+
+/* Error message styling */
+.destination-page .booking .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+    display: none; /* Hide error messages by default */
+}
+/* Responsive Design for Accordion and Tabs */
+@media (max-width: 1024px) {
+
+    
+    .day-title {
+        padding-top: 3%;
+    }
+
+    .destination-page {
+        margin-top: 12%;
+        padding: 0;
+        
+    }
+    
+    .destination-page .tab-btn {
+        margin-bottom: 10px;
+    }
+
+    .destination-page .accordion-img {
+        margin-bottom: 10px;
+    }
+
+    .destination-page .accordion-img img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .destination-page .accordion-text h3 {
+        font-size: 1rem;
+    }
+
+    .destination-page .accordion-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .day-title {
+        padding-top: 3%;
+    }
+    .destination-page .collage-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .destination-page .content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .destination-page .right-column, .destination-page .left-column {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .destination-page h2 {
+        font-size: 1.2rem;
+    }
+
+    .destination-page p, .destination-page ul, .destination-page li {
+        font-size: 0.9rem;
+    }
+
+    .destination-page .booking input,
+    .destination-page .booking textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .destination-page .booking .btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .destination-page .accordion-button,
+    .destination-page .tab-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { /* Very Small Devices */
+
+    .day-title {
+        padding-top: 4%;
+    }
+
+    .destination-page .tabs{
+        flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    
+    .destination-page {
+        padding: 0px;
+        margin-top: 1%;
+    }
+
+    .destination-page .accordion-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .destination-page .accordion-text h3 {
+        font-size: 0.9rem;
+    }
+
+    .destination-page .accordion-text p {
+        font-size: 0.8rem;
+    }
+
+    .destination-page h2 {
+        font-size: 1rem;
+    }
+
+    .destination-page p, .destination-page ul, .destination-page li {
+        font-size: 0.8rem;
+    }
+
+    .destination-page .booking input,
+    .destination-page .booking textarea {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .destination-page .booking .btn {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .destination-page .accordion-button,
+    .destination-page .tab-btn {
+        font-size: 0.8rem;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}

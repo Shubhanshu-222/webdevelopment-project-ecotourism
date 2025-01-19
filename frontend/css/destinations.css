@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.destinations{
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.destination-tabs {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.left-column {
+    width: 25%;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    top: 1;
+   
+}
+
+.left-column .tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-btn {
+    padding: 15px;
+    background: #f9f9f9;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+
+.right-column {
+    flex: 1;
+    padding-left: 28%;
+    padding-right: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border: 2px solid #4CAF50; /* Green border for active field */
+    box-shadow: 0px 3px 6px rgba(72, 175, 80, 0.3); /* Subtle green shadow */
+    transform: translateY(-5px); /* Slight lift */
+    background-color: #f9f9f9; /* Soft background */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 0 0 10px;
+    color: #666;
+    font-size: .9em;
+}
+
+.card a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    
+    .destinations{
+        margin-top: 55px;
+    }
+    .right-column {
+        flex: 1;
+        padding-left: 32%;
+        padding-right: 20px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tabs {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: calc(45% - 5px);
+    }
+}
+
+/* Mobile Media Query (480px and below) */
+@media screen and (max-width: 480px) {
+    .destinations{
+        max-width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 80px;
+    }
+
+    .left-column {
+        width: 100%;
+        position: fixed;
+        top: 2;
+        left: -100%; /* Initially hidden */
+        background: #fff;
+        height: 100%;
+        z-index: 99;
+        transition: left 0.3s ease;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .tab-btn {
+        padding: 15px;
+        background: #f9f9f9;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .tab-btn.active {
+        background: #4CAF50;
+        color: white;
+    }
+    
+    .mobile-tab-button {
+        display: block;
+        position: fixed;
+        left: 1;
+        top: 2;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 15px;
+        z-index: 1000;
+
+    }
+
+    .card {
+        width: calc(100% - 3px);
+    }
+
+
+     .right-column {
+            flex: 1;
+            padding: 10%;
+            padding-right: 20px;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+}

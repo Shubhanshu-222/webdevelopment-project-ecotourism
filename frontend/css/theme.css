@@ -1,0 +1,47 @@
+h1, h2, h3 {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-weight: 700; /* Bold for headings */
+}
+
+/* Body Text */
+body,html {
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    font-weight: 400; /* Regular weight for readability */
+    line-height: 1.6; /* Better spacing for paragraphs */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Highlights or Subheadings */
+blockquote, .highlight {
+    font-family: 'Lora', 'Georgia', serif;
+    font-style: italic;
+    color: #2E8B57; /* Optional eco-green accent */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Links */
+a {
+    color: #FFC107; /* Golden Sun */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/* Card or container background */
+.card {
+    background-color: #FFFFFF; /* White for contrast */
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    border: 1px solid #4CAF50; /* Green border for active field */
+    box-shadow: 0px 3px 6px rgba(72, 175, 80, 0.3); /* Subtle green shadow */
+}
+

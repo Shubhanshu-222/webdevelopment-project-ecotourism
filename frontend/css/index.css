@@ -1,0 +1,292 @@
+
+/* Section Styles */
+.eco-section {
+    position: relative;
+    background: linear-gradient(120deg, #e8f5e8, #d3f0d3);
+    padding: 40px 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 25px 0px;
+}
+
+/* Container Flexbox */
+.eco-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+    z-index: 2;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    color: #2d7038;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.text-content .cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.text-content .cta-button:hover {
+    background-color: #3e9945;
+    transform: translateY(-2px);
+}
+
+/* Video Content */
+.video-content {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Maintain 16:9 ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover .video-overlay {
+    opacity: 1;
+}
+
+.video-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .eco-container {
+        flex-direction: column;
+    }
+
+    .text-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+    }
+
+    .text-content .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .video-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 0.85rem;
+    }
+
+    .text-content .cta-button {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    .video-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .video-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Geometric Design Enhancements */
+.eco-container::before,
+.eco-container::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+}
+
+.eco-container::before {
+    width: 120px;
+    height: 120px;
+    background: #d9f5d9;
+    border-radius: 50%;
+    top: -30px;
+    left: -20px;
+}
+
+.eco-container::after {
+    width: 180px;
+    height: 180px;
+    background: #c6e6c6;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    bottom: -50px;
+    right: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carbon Calculator Section */
+.carbon-calculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 15px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.calculator-content {
+    flex: 1 1 50%;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.calculator-content .label {
+    font-size: 1.1rem;
+    color: #1e7b4f;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.calculator-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #222;
+}
+
+.calculator-content p {
+    font-size: 1rem;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.calculator-content .calculate-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-content .calculate-button:hover {
+    background-color: #3e9945;
+}
+
+/* Calculator Images */
+.calculator-images {
+    flex: 1 1 40%;
+    padding: 20px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.calculator-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carbon-calculator {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .calculator-content {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .calculator-images {
+        flex: 1 1 100%;
+        margin-top: 20px;
+    }
+}
+

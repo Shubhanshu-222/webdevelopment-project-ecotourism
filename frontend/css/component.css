@@ -1,0 +1,692 @@
+/* -----------------------------------------Home page courosel component---------------------------------------------------------------- */
+
+/* Carousel Section */
+.carousel-section {
+    width: 100%;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    background: #fff;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Content Overlay */
+.carousel-content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+.carousel-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Carousel Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-control.prev {
+    left: 15px;
+}
+
+.carousel-control.next {
+    right: 15px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation Dots */
+.carousel-indicators {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #4CAF50;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .carousel-content {
+        bottom: 15%;
+        left: 8%;
+        right: 8%;
+        padding: 15px;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 14px;
+    }
+
+    .carousel-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .carousel-control {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-content {
+        bottom: 20%;
+        left: 10%;
+        right: 10%;
+        padding: 12px;
+    }
+
+    .carousel-content h2 {
+        font-size: 16px;
+    }
+
+    .carousel-content p {
+        font-size: 10px;
+    }
+
+    .carousel-btn {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+
+    .carousel-control {
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .carousel-indicators .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+}
+/* Mobile View Specific Design */
+@media screen and (max-width: 480px) {
+    .carousel {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        border-radius: 0;
+        margin: 0; /* Removed any gap between the image and background */
+    }
+
+    .carousel-content {
+        position: relative;
+        left: 0px;
+        bottom: 30px;
+        background: rgba(76, 175, 80, 1); /* Solid green for better visual appeal */
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        border-radius: 0; /* Removed border-radius for seamless integration */
+        margin: 0; /* Removed margin */
+    }
+
+    .carousel-content h2 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .carousel-content p {
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color:#FFC107;  /* Changed to yellow */
+        border: none;
+        cursor: pointer;
+    }
+
+    .carousel-btn:hover {
+        background-color:#E0A500; /* Slightly darker yellow on hover */
+        transform: scale(1.05); /* Subtle hover effect */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-control {
+        display: none;
+    }
+
+    .carousel-indicators {
+        margin-top: -30px;
+        text-align: center;
+    }
+
+    .carousel-indicators .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        margin: 0 5px;
+        border-radius: 50%;
+    }
+
+    .carousel-indicators .dot.active {
+        background-color: #E0A500; /* Match button yellow for consistency */
+    }
+}
+
+
+
+
+/* -----------------------------------------Eco-destination-courosel-card-component---------------------------------------------------------------- */
+
+
+
+
+/* General Styling for the eco-destinations section */
+#eco-destinations {
+    font-family: Arial, sans-serif;
+    margin: 25px 0px;
+    padding: 0;
+}
+
+#eco-destinations h2 {
+    font-size: 2.5rem;
+    color: #2E8B57;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#eco-destinations p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+}
+
+/* Styling for the section title and description */
+#eco-destinations h2, #eco-destinations p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Banner container styling */
+#eco-destinations .active-destination-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Image styling */
+#eco-destinations .active-destination-img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Details section styling */
+#eco-destinations .active-destination-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Title styling */
+#eco-destinations .active-destination-details h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Description styling */
+#eco-destinations .active-destination-details p {
+    flex-grow: 1;
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Button styling */
+#eco-destinations .book-now-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#eco-destinations .book-now-button:hover {
+    background-color: #45a049;
+}
+
+/* Tabs container styling */
+#eco-destinations .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+/* Base styling for each tab */
+#eco-destinations .tab-link {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px; /* Rounded rectangle shape */
+    background-color: transparent;
+    color: #4CAF50;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect */
+#eco-destinations .tab-link:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Active tab styling */
+#eco-destinations .tab-link.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Tab click animation */
+#eco-destinations .tab-link:active {
+    transform: scale(1.05); /* Minor press effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Tab content styling */
+#eco-destinations .tab-content {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#eco-destinations .tab-content.active {
+    display: block; /* Show active tab content */
+}
+
+/* Carousel Section */
+.card-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centering the carousel */
+}
+
+
+.destination-cards {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/* Card Styles */
+.destination-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 16.66%; /* Adjust to fit 6 cards in the view */
+    min-width: 150px;
+    max-width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E0E0E0;
+    flex-shrink: 0; /* Prevent shrinking */
+    scroll-snap-align: start;
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2C2C2C;
+}
+
+.destination-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.destination-card:hover {
+    transform: scale(1.05); /* Hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth infinite scroll animation */
+@keyframes scroll-cards {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll through all cards */
+    }
+}
+
+/* Responsive adjustments for smaller screen sizes */
+@media (max-width: 1024px) {
+    .destination-card {
+        width: 30%; /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-card {
+        width: 45%; /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-card {
+        width: 90%; /* 1 card per row for mobile */
+    }
+}
+
+/* Hide the scrollbar */
+.card-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card-carousel {
+    -ms-overflow-style: none; /* For IE */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Ensures the carousel adapts for mobile screens */
+@media (max-width: 1024px) {
+    .card-carousel {
+        overflow-x: auto; /* Allow scrolling horizontally on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-carousel {
+        padding: 0 10px; /* Padding for small screens */
+    }
+}
+
+
+/* Center alignment for the button */
+#eco-destinations .view-all-button {
+    display: block;
+    margin: 20px auto; /* Center horizontally */
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #FFC107;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+#eco-destinations .view-all-button:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    background-color: #FFC107; /* Color shift */
+}
+
+/* Click (active) effect */
+#eco-destinations .view-all-button:active {
+    transform: scale(1.05); /* Subtle press-in effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation for active tab content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive scaling for small screens */
+@media (max-width: 768px) {
+    #eco-destinations .view-all-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+
+/* Responsive Styles for Tablet and Mobile */
+
+/* Adjustments for tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #eco-destinations .active-destination-banner {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    #eco-destinations .active-destination-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #eco-destinations .tabs {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .destination-card {
+        width: 45%;
+        max-width: 300px;
+    }
+
+    .card-carousel {
+        padding: 0 10px;
+        overflow-x: auto;
+    }
+}
+
+/* Adjustments for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    #eco-destinations h2 {
+        font-size: 2rem;
+    }
+
+    #eco-destinations p {
+        font-size: 0.9rem;
+    }
+
+    #eco-destinations .active-destination-details {
+        padding: 15px;
+    }
+
+    #eco-destinations .book-now-button {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .destination-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .tab-link {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .view-all-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Adjustments for smaller mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #eco-destinations .tabs {
+        gap: 26px;
+        margin: 20px 10px;
+    }
+    
+    #eco-destinations h2 {
+        font-size: 1.8rem;
+    }
+
+    #eco-destinations p {
+        font-size: 0.8rem;
+    }
+
+    .active-destination-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .tab-link {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .destination-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .view-all-button {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+}  
+
+/* General mobile-friendly optimizations */
+.card-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card-carousel {
+    -ms-overflow-style: none; /* IE */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Ensure smooth horizontal scrolling */
+.card-carousel {
+    scroll-behavior: smooth;
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+}

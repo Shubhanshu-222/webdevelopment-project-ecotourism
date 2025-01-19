@@ -1,0 +1,137 @@
+/* About Us Content */
+.about-content {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Left Column */
+.about-left {
+    flex: 1;
+}
+
+.about-left .about-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-left .about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-left .about-section h2 {
+    font-size: 2.2rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-left: 6px solid #4CAF50;
+    padding-left: 12px;
+}
+
+.about-left .about-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Divider */
+.divider {
+    width: 2px;
+    background: #ddd;
+    margin: 0 20px;
+}
+
+/* Right Column */
+.about-right {
+    flex: 1;
+}
+
+.team-section .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.team-section .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-section .team-member h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #34495e;
+}
+
+.team-section .team-member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsive Design */
+/* General Styling for Mobile View */
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-left, 
+    .about-right {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .about-left .about-section, 
+    .team-section {
+        margin: 0 auto; /* Center align the sections */
+    }
+
+    .team-section .team-member {
+        flex-direction: row; /* Retain row layout for team members */
+        gap: 15px;
+        text-align: left;
+    }
+
+    .team-section .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .divider {
+        display: none; /* Hide divider for mobile view */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-left .about-section h2,
+    .team-section .team-member h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-left .about-section p, 
+    .team-section .team-member p {
+        font-size: 1rem;
+    }
+
+    .team-section .team-member img {
+        width: 70px;
+        height: 70px;
+    }
+}
